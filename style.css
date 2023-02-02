@@ -52,15 +52,16 @@ body {
 
 .card-title{
     color: rgb(245, 146, 7);
-    padding-left: 10px;
     text-shadow: 2px 2px rgb(47, 47, 174);
+    text-align: left;
+    font-weight: 500;
 }
 
 .card {
     background: linear-gradient(to right, rgb(93, 156, 233), rgb(2, 69, 151));
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 25px;
+    padding-left: 20px;
     width: 200px;
     margin: 0 auto;
     float: none;
@@ -69,8 +70,6 @@ body {
     border-radius: 10px;
     text-align: justify;
 }
-
-
 
 /*
 btn CE
