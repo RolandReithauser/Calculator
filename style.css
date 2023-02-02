@@ -101,7 +101,9 @@ body {
 .forminputfield {
     font-family: 'SevenSegment', sans-serif;
     font-size: large;
-    background-color: aqua;
+    font-weight: 600;
+    color: darkgreen;
+    background-color: black;
     border-radius: 5px;
     max-width: 170px;
     box-shadow: 2px 2px rgb(47, 47, 174);
