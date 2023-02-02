@@ -26,7 +26,6 @@ body {
 }
 
 .btn {
-    color: aliceblue;
     background: linear-gradient(to right, rgb(11, 104, 216), rgb(47, 47, 174));
     width: 35px;
     height: 35px;
@@ -34,10 +33,69 @@ body {
     border: 1px solid rgb(72, 134, 211);
     border-radius: 3px;
     box-shadow: 2px 2px rgb(47, 47, 174);
+    color: rgb(62, 222, 3);
 }
 
-.btn, .num {
+.btn:hover {
+    background: linear-gradient(to right, rgb(6, 66, 138), rgb(23, 23, 86));
+}
+
+.btn:active {
+    background: linear-gradient(to right, rgb(45, 136, 246), rgb(78, 78, 244));
+    box-shadow: 2px 2px rgb(27, 27, 100);
+    transform: translateY(3px);
+  }
+
+.btnequal {
+    color: rgb(62, 222, 3);
+    background: linear-gradient(to right, rgb(185, 185, 186), rgb(77, 77, 78));
+}
+
+.btnequal:hover {
+    background: linear-gradient(to right, rgb(113, 113, 113), rgb(39, 39, 39));
+}
+
+.btnequal:active {
+    background: linear-gradient(to right, rgb(233, 233, 233), rgb(110, 110, 110));
+    box-shadow: 2px 2px rgb(27, 27, 100);
+    transform: translateY(3px);
+  }
+
+.btnnum {
     color: rgb(178, 222, 3);
+}
+
+.btnaddition, 
+.btnsubtraction, 
+.btnmultiplication,
+.btnCE,
+.btnC,
+.btnBS,
+.btndivision {
+    color: rgb(62, 222, 3);
+    background: linear-gradient(to right, rgb(6, 74, 157), rgb(31, 31, 114));
+}
+
+.btnaddition:hover, 
+.btnsubtraction:hover, 
+.btnmultiplication:hover,
+.btnCE:hover,
+.btnC:hover,
+.btnBS:hover,
+.btndivision:hover {
+    color: rgb(62, 222, 3);
+    background: linear-gradient(to right, rgb(3, 38, 82), rgb(16, 16, 59));
+}
+
+.btnaddition:active, 
+.btnsubtraction:active, 
+.btnmultiplication:active,
+.btnCE:active,
+.btnC:active,
+.btnBS:active,
+.btndivision:active {
+    color: rgb(62, 222, 3);
+    background: linear-gradient(to right, rgb(10, 104, 219), rgb(56, 56, 212));
 }
 
 .forminputfield {
@@ -71,25 +129,32 @@ body {
     border-radius: 10px;
 }
 
+.buttonlegend {
+    text-align: center;
+    color: rgb(62, 222, 3);
+    background: linear-gradient(to right, rgb(6, 74, 157), rgb(31, 31, 114));
+    box-shadow: 2px 2px rgb(47, 47, 174);
+}
+
 /*
-btn CE
-btn C
-btn BS
-btn division
-btn seven
-btn eight
-btn nine
-btn multiplication
-btn four
-btn five
-btn six
-btn subtraction
-btn one
-btn two
-btn three
-btn addition
-btn sign
-btn zero
-btn dot
-btn equal
+btn btnCE
+btn btnC
+btn btnBS
+btn btndivision
+btn btnseven
+btn btneight
+btn btnnine
+btn btnmultiplication
+btn btnfour
+btn btnfive
+btn btnsix
+btn btnsubtraction
+btn btnone
+btn btntwo
+btn btnthree
+btn btnaddition
+btn btnsign
+btn btnzero
+btn btndot
+btn btnequal
 */

@@ -19,38 +19,43 @@
             <div class="card-body">
                 <br>
                 <div class="row">
-                    <button title="button" type="button" class="btn CE">CE</button>
-                    <button title="button" type="button" class="btn C">C</button>
-                    <button title="button" type="button" class="btn BS">BS</button>
-                    <button title="button" type="button" class="btn division">/</button>
+                    <input type="button" id="btnCE" class="btn btnCE" value="CE" onclick="send(this.value)">
+                    <input type="button" id="btnC" class="btn btnC" value="C" onclick="send(this.value)">
+                    <input type="button" id="btnBS" class="btn btnBS" value="BS" onclick="send(this.value)">
+                    <input type="button" id="btndivision" class="btn btndivision" value="/" onclick="send(this.value)">
                 </div>
                 <div class="row">
-                    <button title="button" type="button" class="btn seven num">7</button>
-                    <button title="button" type="button" class="btn eight num">8</button>
-                    <button title="button" type="button" class="btn nine num">9</button>
-                    <button title="button" type="button" class="btn multiplication">*</button>
+                    <input type="button" id="btnseven" class="btn btnseven seven btnnum" value="7" onclick="send(this.value)">
+                    <input type="button" id="btneight" class="btn btneight eight btnnum" value="8" onclick="send(this.value)">
+                    <input type="button" id="btnnine" class="btn btnnine nine btnnum" value="9" onclick="send(this.value)">
+                    <input type="button" id="btnmultiplication" class="btn btnmultiplication" value="*" onclick="send(this.value)">
                 </div>
                 <div class="row">
-                    <button title="button" type="button" class="btn four num">4</button>
-                    <button title="button" type="button" class="btn five num">5</button>
-                    <button title="button" type="button" class="btn six num">6</button>
-                    <button title="button" type="button" class="btn subtraction">-</button>
+                    <input type="button" id="btnfour" class="btn btnfour four btnnum" value="4" onclick="send(this.value)">
+                    <input type="button" id="btnfive" class="btn btnfive five btnnum" value="5" onclick="send(this.value)">
+                    <input type="button" id="btnsix" class="btn btnsix six btnnum" value="6" onclick="send(this.value)">
+                    <input type="button" id="btnsubtraction" class="btn btnsubtraction" value="-" onclick="send(this.value)">
                 </div>
                 <div class="row">
-                    <input type="button" class="btn one num" value="1" onclick="form.value += '1' ">
-                    <button title="button" type="button" class="btn two num">2</button>
-                    <button title="button" type="button" class="btn three num">3</button>
-                    <button title="button" type="button" class="btn addition">+</button>
+                    <input type="button" id="btnone" class="btn btnone one btnnum" value="1" onclick="send(this.value)">
+                    <input type="button" id="btntwo" class="btn btntwo two btnnum" value="2" onclick="send(this.value)">
+                    <input type="button" id="btnthree" class="btn btnthree three btnnum" value="3" onclick="send(this.value)">
+                    <input type="button" id="btnaddition" class="btn btnaddition" value="+" onclick="send(this.value)">
                 </div>
                 <div class="row">
-                    <button title="button" type="button" class="btn sign">&plusmn;</button>
-                    <button title="button" type="button" class="btn zero num">0</button>
-                    <button title="button" type="button" class="btn dot">.</button>
-                    <button title="button" type="button" class="btn equal">=</button>
+                    <input type="button" id="btnsign" class="btn btnsign sign" value="&plusmn;" onclick="send(this.value)">
+                    <input type="button" id="btnzero" class="btn btnzero btnnum" value="0" onclick="send(this.value)">
+                    <input type="button" id="btndot" class="btn btndot dot" value="." onclick="send(this.value)">
+                    <input type="button" id="btnequal" class="btn btnequal" value="=" onclick="send(this.value)">
                 </div>
-                <h5 class="card-title">Made by: Wavhudi, Mohamed, <br>
-                    Premek & Roland &copy; 2023
-                </h5>
+                <br>
+                <fieldset class="fieldset">
+                    <legend class="legend">Made by:</legend>
+                    <input class="buttonlegend" type="button" value="Wavhudi">
+                    <input class="buttonlegend" type="button" value="Mohamed">
+                    <input class="buttonlegend" type="button" value="Premek">
+                    <input class="buttonlegend" type="button" value="Roland">
+                </fieldset>
             </div>
         </div>
     </section>

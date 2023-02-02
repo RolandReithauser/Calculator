@@ -1,4 +1,7 @@
-
+function send(){
+    let buttonValue = document.getElementById('btn').value;
+    
+}
 /*
 btn CE
 btn C
