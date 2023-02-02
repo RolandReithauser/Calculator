@@ -62,13 +62,13 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
+    padding-right: 20px;
     width: 200px;
     margin: 0 auto;
     float: none;
     box-shadow: 5px 5px orange;
     border: 1px solid orange;
     border-radius: 10px;
-    text-align: justify;
 }
 
 /*
