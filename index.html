@@ -9,58 +9,48 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
-    <header>
-        <section class="headersection">
-            <div class="topnav" id="topnav">
-                <a class="headerlogo">Calculator</a>
-                <div class="topnav-right">
-                </div>
-            </div>
-        </section>
-    </header>
+<body id="body" class="body flex d-flex flex-col min-vh-100">
     <section class="section-1">
-        <div class="fig-captions1">
-            <figure>
-                <figcaption class="awesome">This website is a calculator
-                    <figcaption class="awesomelower">You can calculating :) It's DONE!!!</figcaption>
-                    <form action="">
-                        <input title="numberplate" type="text">
-                    </form>
+        <div class="card mb-3">
+            <p class="headerlogo">Calculator</p>
+            <form action="" class="form">
+                <input class="forminputfield" title="numberplate" type="text">
+            </form>
+            <div class="card-body">
+                <br>
+                <div class="row">
                     <button title="button" type="button" class="btn CE">CE</button>
                     <button title="button" type="button" class="btn C">C</button>
-                    <button title="button" type="button" class="btn BS">⌫</button>
+                    <button title="button" type="button" class="btn BS">BS</button>
                     <button title="button" type="button" class="btn division">/</button>
-                    <br>
-                    <button title="button" type="button" class="btn seven">7</button>
-                    <button title="button" type="button" class="btn eight">8</button>
-                    <button title="button" type="button" class="btn nine">9</button>
+                </div>
+                <div class="row">
+                    <button title="button" type="button" class="btn seven num">7</button>
+                    <button title="button" type="button" class="btn eight num">8</button>
+                    <button title="button" type="button" class="btn nine num">9</button>
                     <button title="button" type="button" class="btn multiplication">*</button>
-                    <br>
-                    <button title="button" type="button" class="btn four">4</button>
-                    <button title="button" type="button" class="btn five">5</button>
-                    <button title="button" type="button" class="btn six">6</button>
+                </div>
+                <div class="row">
+                    <button title="button" type="button" class="btn four num">4</button>
+                    <button title="button" type="button" class="btn five num">5</button>
+                    <button title="button" type="button" class="btn six num">6</button>
                     <button title="button" type="button" class="btn subtraction">-</button>
-                    <br>
-                    <button title="button" type="button" class="btn one">1</button>
-                    <button title="button" type="button" class="btn two">2</button>
-                    <button title="button" type="button" class="btn three">3</button>
+                </div>
+                <div class="row">
+                    <button title="button" type="button" class="btn one num">1</button>
+                    <button title="button" type="button" class="btn two num">2</button>
+                    <button title="button" type="button" class="btn three num">3</button>
                     <button title="button" type="button" class="btn addition">+</button>
-                    <br>
+                </div>
+                <div class="row">
                     <button title="button" type="button" class="btn sign">&plusmn;</button>
-                    <button title="button" type="button" class="btn zero">0</button>
+                    <button title="button" type="button" class="btn zero num">0</button>
                     <button title="button" type="button" class="btn dot">.</button>
                     <button title="button" type="button" class="btn equal">=</button>
-                    <br>  
-                </figcaption>
-            </figure>
-            <figure><img class="imgsection1" src="" alt="">
-            </figure>
+                </div>
+                <h5 class="card-title">Made by: Roland &copy; 2023</h5>
+            </div>
         </div>
-    </section>
-    <section class="footer">
-        <p>Made by: Wavhudi, Mohamed, Premek and Roland</p>
-        <p>Copyright &copy;</p>
     </section>
     <script src="./script.js"></script>
 </body>
