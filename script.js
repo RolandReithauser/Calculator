@@ -2,6 +2,7 @@ function send(){
     let buttonValue = document.getElementById('btn').value;
     
 }
+
 /*
 btn CE
 btn C
@@ -24,3 +25,20 @@ btn zero
 btn dot
 btn equal
 */
+
+function add(number1,number2){
+    return number1 + number2;
+}
+
+function substract(number1,number2){
+  return number1 + number2;
+}
+
+function divide(number1,number2){
+ return number1 / number2;`6`
+}
+
+function multiply(number1,number2){
+ return number1 * number2;
+}
+
