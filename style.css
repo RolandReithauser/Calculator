@@ -139,7 +139,11 @@ body {
 .fieldset{
     background: linear-gradient(to right, rgb(6, 74, 157), rgb(31, 31, 114));
 }
-
+.legend{
+    color: black;
+    background-color:white;
+    border-radius: 3px;
+}
 .buttonlegend {
     text-align: center;
     color: rgb(62, 222, 3);
