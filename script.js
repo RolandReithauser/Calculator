@@ -1,6 +1,6 @@
-function send(){
-    let buttonValue = document.getElementById('btn').value;
-    
+function display(val){
+    document.getElementById('result').value += val
+    return val
 }
 
 /*
@@ -42,3 +42,17 @@ function multiply(number1,number2){
  return number1 * number2;
 }
 
+function solve(){
+    let x = document.getElementById('result').value
+    let y = eval(x);
+    document.getElementById('result').value = y
+    return y
+}
+
+function clearScreen(){
+    document.getElementById('result').value = ''
+}
+
+function backSpace(){
+    document.getElementById('result').value = pop(result)
+}
