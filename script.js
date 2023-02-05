@@ -45,6 +45,7 @@ function multiply(number1, number2) {
 function solve() {
 	let x = document.getElementById("result").value;
 	let y = eval(x);
+	y = parseFloat(y.toFixed(12));// floating point math fix
 	document.getElementById("result").value = y;
 	return y;
 }
