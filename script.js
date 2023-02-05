@@ -1,6 +1,6 @@
-function display(val){
-    document.getElementById('result').value += val
-    return val
+function display(val) {
+	document.getElementById('result').value += val;
+	return val;
 }
 
 /*
@@ -26,33 +26,33 @@ btn dot
 btn equal
 */
 
-function add(number1,number2){
-    return number1 + number2;
+function add(number1, number2) {
+	return number1 + number2;
 }
 
-function substract(number1,number2){
-  return number1 + number2;
+function substract(number1, number2) {
+	return number1 - number2;
 }
 
-function divide(number1,number2){
- return number1 / number2;`6`
+function divide(number1, number2) {
+	return number1 / number2;
 }
 
-function multiply(number1,number2){
- return number1 * number2;
+function multiply(number1, number2) {
+	return number1 * number2;
 }
 
-function solve(){
-    let x = document.getElementById('result').value
-    let y = eval(x);
-    document.getElementById('result').value = y
-    return y
+function solve() {
+	let x = document.getElementById('result').value;
+	let y = eval(x);
+	document.getElementById('result').value = y;
+	return y;
 }
 
-function clearScreen(){
-    document.getElementById('result').value = ''
+function clearScreen() {
+	document.getElementById('result').value = '';
 }
 
-function backSpace(){
-    document.getElementById('result').value = pop(result)
+function backSpace() {
+	document.getElementById('result').value = pop(result);
 }

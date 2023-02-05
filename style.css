@@ -50,7 +50,7 @@ body {
     background: linear-gradient(to right, rgb(45, 136, 246), rgb(78, 78, 244));
     box-shadow: 2px 2px rgb(27, 27, 100);
     transform: translateY(3px);
-  }
+}
 
 .btnequal {
     color: rgb(62, 222, 3);
@@ -65,14 +65,14 @@ body {
     background: linear-gradient(to right, rgb(233, 233, 233), rgb(110, 110, 110));
     box-shadow: 2px 2px rgb(27, 27, 100);
     transform: translateY(3px);
-  }
+}
 
 .btnnum {
     color: rgb(178, 222, 3);
 }
 
-.btnaddition, 
-.btnsubtraction, 
+.btnaddition,
+.btnsubtraction,
 .btnmultiplication,
 .btnC,
 .btnBS,
@@ -81,8 +81,8 @@ body {
     background: linear-gradient(to right, rgb(6, 74, 157), rgb(31, 31, 114));
 }
 
-.btnaddition:hover, 
-.btnsubtraction:hover, 
+.btnaddition:hover,
+.btnsubtraction:hover,
 .btnmultiplication:hover,
 .btnCE:hover,
 .btnC:hover,
@@ -92,8 +92,8 @@ body {
     background: linear-gradient(to right, rgb(3, 38, 82), rgb(16, 16, 59));
 }
 
-.btnaddition:active, 
-.btnsubtraction:active, 
+.btnaddition:active,
+.btnsubtraction:active,
 .btnmultiplication:active,
 .btnCE:active,
 .btnC:active,
@@ -105,7 +105,7 @@ body {
 
 .forminputfield {
     font-family: 'SevenSegment', sans-serif;
-    font-size: large;
+    font-size: x-large;
     font-weight: 600;
     color: darkgreen;
     background-color: black;
@@ -115,7 +115,7 @@ body {
     text-align: right;
 }
 
-.card-title{
+.card-title {
     color: rgb(245, 146, 7);
     text-shadow: 2px 2px rgb(47, 47, 174);
     text-align: left;
@@ -136,12 +136,13 @@ body {
     border-radius: 10px;
 }
 
-.fieldset{
+.fieldset {
     background: linear-gradient(to right, rgb(6, 74, 157), rgb(31, 31, 114));
 }
-.legend{
+
+.legend {
     color: black;
-    background-color:white;
+    background-color: white;
     border-radius: 3px;
 }
 .buttonlegend {
