@@ -1,10 +1,14 @@
 function display(val) {
 	let display = document.getElementById("result").value;
+	if (display.indexOf("-") == 0)
+		display = display.substring(1);
 	if ((val == "+" || val == "-" || val == "*" || val == "/") &&
 		display.search(/[+\-*/]\.?\d/) != -1) {
 		solve();
 		display = document.getElementById("result").value;
 	}
+	if (display.indexOf("-") == 0)
+		display = display.substring(1);
 
 	if ((val == "+" || val == "-" || val == "*" || val == "/") &&
 		(display.search(/[+\-*/]/) != -1 || display.search(/\d/) == -1))
