@@ -1,6 +1,19 @@
 function display(val) {
+	let display = document.getElementById("result").value;
+	if ((val == "+" || val == "-" || val == "*" || val == "/") &&
+		display.search(/[+\-*/]\.?\d/) != -1) {
+		solve();
+		display = document.getElementById("result").value;
+	}
+
+	if ((val == "+" || val == "-" || val == "*" || val == "/") &&
+		(display.search(/[+\-*/]/) != -1 || display.search(/\d/) == -1))
+		return;
+	if (val == "." && (display.indexOf(".") != -1 && display.search(/[+\-*/]/) == -1 ||
+		display.search(/\.?\d*[+\-*/]\d*\./) != -1))
+		return;
+
 	document.getElementById("result").value += val;
-	return document.getElementById("result").value;
 }
 
 /*
@@ -45,7 +58,7 @@ function multiply(number1, number2) {
 function solve() {
 	let x = document.getElementById("result").value;
 	let y = eval(x);
-	y = parseFloat(y.toFixed(12));// floating point math fix
+	y = parseFloat(y?.toFixed(12));// floating point math fix
 	document.getElementById("result").value = y;
 	return y;
 }
