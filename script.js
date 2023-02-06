@@ -27,6 +27,23 @@ function display(val) {
 	resultDisplay.value += val;
 }
 
+document.addEventListener('keydown', (event) => {
+	const key = event.key;
+	if (key >= '0' && key <= '9') {
+		display(key);
+	} else if (isOperator(key)) {
+		display(key);
+	} else if (key === 'Enter') {
+		solve();
+	} else if (key === '.') {
+		display('.');
+	} else if (key === 'Backspace') {
+		backSpace();
+	} else if (key === 'Escape') {
+		clearScreen();
+	}
+});
+
 function add(number1, number2) {
 	return number1 + number2;
 }
