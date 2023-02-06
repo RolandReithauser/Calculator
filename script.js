@@ -1,53 +1,37 @@
+const resultDisplay = document.getElementById("result");
+
 function display(val) {
-	let display = document.getElementById("result").value;
-	if (display.indexOf("-") == 0)
+	let display = resultDisplay.value;
+	if (display.startsWith("-")) {
 		display = display.substring(1);
-	if ((val == "+" || val == "-" || val == "*" || val == "/") &&
-		display.search(/[+\-*/]\.?\d/) != -1) {
-		solve();
-		display = document.getElementById("result").value;
 	}
-	if (display.indexOf("-") == 0)
+
+	if (isOperator(val) && hasOperator(display)) {
+		solve();
+		display = resultDisplay.value;
+	}
+
+	if (display.startsWith("-")) {
 		display = display.substring(1);
+	}
 
-	if ((val == "+" || val == "-" || val == "*" || val == "/") &&
-		(display.search(/[+\-*/]/) != -1 || display.search(/\d/) == -1))
+	if (isOperator(val) && (hasOperator(display) || !hasNumber(display))) {
 		return;
-	if (val == "." && (display.indexOf(".") != -1 && display.search(/[+\-*/]/) == -1 ||
-		display.search(/\.?\d*[+\-*/]\d*\./) != -1))
-		return;
+	}
 
-	document.getElementById("result").value += val;
+	if (val === "." && (display.includes(".") && !hasOperator(display) ||
+		hasMultipleDecimals(display))) {
+		return;
+	}
+
+	resultDisplay.value += val;
 }
-
-/*
-btn CE
-btn C
-btn BS
-btn division
-btn seven
-btn eight
-btn nine
-btn multiplication
-btn four
-btn five
-btn six
-btn subtraction
-btn one
-btn two
-btn three
-btn addition
-btn sign
-btn zero
-btn dot
-btn equal
-*/
 
 function add(number1, number2) {
 	return number1 + number2;
 }
 
-function substract(number1, number2) {
+function subtract(number1, number2) {
 	return number1 - number2;
 }
 
@@ -60,17 +44,32 @@ function multiply(number1, number2) {
 }
 
 function solve() {
-	let x = document.getElementById("result").value;
-	let y = eval(x);
-	y = parseFloat(y?.toFixed(12));// floating point math fix
-	document.getElementById("result").value = y;
-	return y;
+	const expression = resultDisplay.value;
+	const result = eval(expression);
+	resultDisplay.value = parseFloat(result.toFixed(12));
+	return result;
 }
 
 function clearScreen() {
-	document.getElementById("result").value = "";
+	resultDisplay.value = "";
 }
 
 function backSpace() {
-	document.getElementById("result").value = document.getElementById("result").value.slice(0, -1);
+	resultDisplay.value = resultDisplay.value.slice(0, -1);
+}
+
+function isOperator(val) {
+	return ['+', '-', '*', '/'].includes(val);
+}
+
+function hasOperator(str) {
+	return /[+\-*/]\.?\d/.test(str);
+}
+
+function hasNumber(str) {
+	return /\d/.test(str);
+}
+
+function hasMultipleDecimals(str) {
+	return /\.?\d*[+\-*/]\d*\./.test(str);
 }
