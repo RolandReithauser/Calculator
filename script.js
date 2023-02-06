@@ -1,92 +1,61 @@
-const resultDisplay = document.getElementById("result");
+const display = document.querySelector('#result');
+let firstNumber = null, operator = null, secondNumber = null;
 
-function display(val) {
-	let display = resultDisplay.value;
-	if (display.startsWith("-")) {
-		display = display.substring(1);
-	}
-
-	if (isOperator(val) && hasOperator(display)) {
-		solve();
-		display = resultDisplay.value;
-	}
-
-	if (display.startsWith("-")) {
-		display = display.substring(1);
-	}
-
-	if (isOperator(val) && (hasOperator(display) || !hasNumber(display))) {
-		return;
-	}
-
-	if (val === "." && (display.includes(".") && !hasOperator(display) ||
-		hasMultipleDecimals(display))) {
-		return;
-	}
-
-	resultDisplay.value += val;
+function updateDisplay(value) {
+  display.value = value;
 }
 
-document.addEventListener('keydown', (event) => {
-	const key = event.key;
-	if (key >= '0' && key <= '9') {
-		display(key);
-	} else if (isOperator(key)) {
-		display(key);
-	} else if (key === 'Enter') {
-		solve();
-	} else if (key === '.') {
-		display('.');
-	} else if (key === 'Backspace') {
-		backSpace();
-	} else if (key === 'Escape') {
-		clearScreen();
-	}
-});
-
-function add(number1, number2) {
-	return number1 + number2;
+function add(a, b) {
+  return a + b;
 }
 
-function subtract(number1, number2) {
-	return number1 - number2;
+function subtract(a, b) {
+  return a - b;
 }
 
-function divide(number1, number2) {
-	return number1 / number2;
+function multiply(a, b) {
+  return a * b;
 }
 
-function multiply(number1, number2) {
-	return number1 * number2;
+function divide(a, b) {
+  if (b === 0) {
+    updateDisplay('Cannot divide by 0');
+    return;
+  }
+  return a / b;
 }
 
-function solve() {
-	const expression = resultDisplay.value;
-	const result = eval(expression);
-	resultDisplay.value = parseFloat(result.toFixed(12));
-	return result;
+function operate(op, a, b) {
+  switch (op) {
+    case '+': return add(a, b);
+    case '-': return subtract(a, b);
+    case '*': return multiply(a, b);
+    case '/': return divide(a, b);
+  }
 }
 
-function clearScreen() {
-	resultDisplay.value = "";
+function handleNumber(e) {
+  const value = e.target.value;
+  if (!firstNumber) firstNumber = parseFloat(value);
+  else if (!operator) firstNumber = parseFloat(`${firstNumber}${value}`);
+  else if (!secondNumber) secondNumber = parseFloat(value);
+  else secondNumber = parseFloat(`${secondNumber}${value}`);
+  updateDisplay(firstNumber || secondNumber || 0);
 }
 
-function backSpace() {
-	resultDisplay.value = resultDisplay.value.slice(0, -1);
+function handleOperator(e) {
+  operator = e.target.value;
 }
 
-function isOperator(val) {
-	return ['+', '-', '*', '/'].includes(val);
+function handleEqual() {
+  if (!firstNumber || !operator || !secondNumber) return;
+  const result = operate(operator, firstNumber, secondNumber);
+  updateDisplay(result);
+  firstNumber = result;
+  operator = secondNumber = null;
 }
 
-function hasOperator(str) {
-	return /[+\-*/]\.?\d/.test(str);
-}
-
-function hasNumber(str) {
-	return /\d/.test(str);
-}
-
-function hasMultipleDecimals(str) {
-	return /\.?\d*[+\-*/]\d*\./.test(str);
+function handleClear() {
+  updateDisplay(0);
+  firstNumber = operator = secondNumber = null;
 }
